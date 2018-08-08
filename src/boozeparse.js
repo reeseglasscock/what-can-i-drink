@@ -1,14 +1,18 @@
+import { Drink } from './drink.js';
+
 export class BoozeParse {
   getDrinks(response) {
     let body = JSON.parse(response);
-    let drinkNameArray = [];
-    let drinkImageArray = [];
-    let drinkIdArray = [];
+    let drinks = [];
     body.drinks.forEach(function(drink) {
-      drinkNameArray.push(drink.strDrink);
-      drinkImageArray.push(drink.strDrinkThumb);
-      drinkIdArray.push(drink.idDrink);
+      let foundDrink = new Drink(drink.strDrink, drink.strDrinkThumb, drink.idDrink);
+      drinks.push(foundDrink);
     });
-    return drinkNameArray;
+    return drinks;
+  }
+
+  getDrinkInfo(response) {
+    let body = JSON.parse(response);
+
   }
 }
