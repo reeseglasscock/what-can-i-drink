@@ -14,6 +14,7 @@ export class BoozeParse {
 
   getDrinkInfo(response) {
     let body = JSON.parse(response);
+    //run loop to get all ingredients at [index] and then add in array to Instructions
     let foundInstruction= new Instruction(body.drinks[0].strGlass, body.drinks[0].strInstructions, body.drinks[0].strIngredient1);
     return foundInstruction;
   }
