@@ -1,4 +1,5 @@
 import { Drink } from './drink.js';
+import { Instruction } from './instruction.js'
 
 export class BoozeParse {
   getDrinks(response) {
@@ -13,6 +14,7 @@ export class BoozeParse {
 
   getDrinkInfo(response) {
     let body = JSON.parse(response);
-
+    let foundInstruction= new Instruction(body.drinks[0].strGlass, body.drinks[0].strInstructions, body.drinks[0].strIngredient1);
+    return foundInstruction;
   }
 }
