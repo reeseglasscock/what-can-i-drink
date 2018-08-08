@@ -39,7 +39,9 @@ $(document).ready(function() {
                     </button>
                   </div>
                   <div class="modal-body">
-                    ${foundDrinkInstructions.instructions}
+                    <p>${foundDrinkInstructions.glass}</p>
+                    <p>${foundDrinkInstructions.instructions}</p>
+                    <p>${foundDrinkInstructions.ingredient}</p>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
