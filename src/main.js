@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import 'bootstrap';
-// import './styles.css';
+import './styles.css';
 import { Booze } from './booze.js';
 import { BoozeParse } from './boozeparse.js';
 
@@ -18,7 +18,7 @@ $(document).ready(function() {
       let foundDrinks = newBoozeParse.getDrinks(response);
       foundDrinks.forEach(function(drink) {
         console.log(drink);
-        $('.drinkInfo').append(`<li>${drink.name}</li>`)
+        $('.drinkInfo').append(`<figure><img src=${drink.image}><figcaption>${drink.name}</figcaption></figure>`)
       })
     }, function(error) {
       $('.showError').text(`There was an error: ${error.message}`);
