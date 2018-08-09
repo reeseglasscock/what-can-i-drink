@@ -1,3 +1,22 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background: url('./img/bg_image.jpg') no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-family: 'Monoton', cursive;
+  padding-top: 80px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: white;
+  font-size: 4em;
+}
+
 .modal-header {
   text-align: center;
 }
@@ -17,5 +36,9 @@
 }
 
 .drink-btn {
+  text-align: center;
+}
+
+.selectIngredient1 {
   text-align: center;
 }

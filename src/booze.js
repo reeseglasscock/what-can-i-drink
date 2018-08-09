@@ -31,4 +31,20 @@ export class Booze {
       request.send();
     })
   }
+
+  getAllIngredients() {
+    return new Promise((resolve, reject) => {
+      let request = new XMLHttpRequest();
+      let url = `https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list`;
+      request.onload = () => {
+        if (request.status === 200) {
+          resolve(request.response);
+        } else {
+          reject(Error(request.statusText));
+        }
+      }
+      request.open("GET", url, true);
+      request.send();
+    })
+  }
 }

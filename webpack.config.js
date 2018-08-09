@@ -2,7 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-// const PopperPlugin = require('popper.js');
 
 module.exports = {
   entry: './src/main.js',
@@ -22,12 +21,6 @@ module.exports = {
       template: './src/index.html',
       inject: 'body'
     }),
-  //   new webpack.ProvidePlugin({
-  //   $: 'jquery',
-  //   jQuery: 'jquery',
-  //   'window.jQuery': 'jquery',
-  //   Popper: ['popper.js', 'default']
-  // })
   ],
   module: {
     rules: [

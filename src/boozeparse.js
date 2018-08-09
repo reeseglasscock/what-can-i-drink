@@ -26,4 +26,13 @@ export class BoozeParse {
     let foundInstruction= new Instruction(body.drinks[0].strGlass, body.drinks[0].strInstructions, ingredientsArray, amountOfIngredients);
     return foundInstruction;
   }
+
+  getAllIngredientsParse(response) {
+    let body = JSON.parse(response);
+    let allIngredients = [];
+    body.drinks.forEach(function(ingredient) {
+      allIngredients.push(ingredient.strIngredient1);
+    });
+    return allIngredients.sort();
+  }
 }
