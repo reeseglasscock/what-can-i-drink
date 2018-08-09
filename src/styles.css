@@ -1,7 +1,21 @@
-img {
-  width: 50px;
+.modal-header {
+  text-align: center;
 }
 
-.modal-header {
+.card {
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 4px 5px 6px rgba(34,34,34,0.6);
+}
+
+.card img {
+  width: 100px;
+  border-radius: 20px;
+  display: flex;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.drink-btn {
   text-align: center;
 }

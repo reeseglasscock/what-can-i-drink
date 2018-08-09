@@ -50,8 +50,8 @@ $(document).ready(function() {
         promise2.then(function(response){
           let newBoozeParse2 = new BoozeParse();
           let foundDrinkInstructions = newBoozeParse2.getDrinkInfo(response)
-          $('.drinkInfo').append(`<figure><img src=${drink.image}><figcaption><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#${drink.id}">
-    ${drink.name}</button></figcaption></figure>
+          $('.drinkInfo').append(`<div class="card"><figure class="drink-img"><img src=${drink.image}><figcaption class="drink-btn"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#${drink.id}">
+    ${drink.name}</button></figcaption></figure></div>
             <div class="modal fade" id="${drink.id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
