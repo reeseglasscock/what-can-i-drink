@@ -5,6 +5,22 @@
     <title>Booze Me!</title>
   </head>
   <body>
+    <!-- Modal -->
+    <div class="modal fade" id="ageVerification" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Are you over 21 years old?</h5>
+          </div>
+          <div id="ageVerificationDenied">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="overage">Yes</button>
+            <button type="button" class="btn btn-secondary" id="underage">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <input type="text" id="ingredient">
     <button type="button" id="findDrink">Find</button>
     <div class="col">

@@ -1,3 +1,7 @@
 img {
   width: 50px;
 }
+
+.modal-header {
+  text-align: center;
+}

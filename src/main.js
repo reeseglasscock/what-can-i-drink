@@ -4,8 +4,32 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import { Booze } from './booze.js';
 import { BoozeParse } from './boozeparse.js';
+import { Foaas } from './foaas.js';
+
+
 
 $(document).ready(function() {
+
+  $('#ageVerification').modal({
+    backdrop: 'static',
+    keyboard: false
+  })
+
+  $('#underage').click(function() {
+    $("#overage").hide();
+    $("#underage").hide();
+    let foaas = new Foaas();
+    let foaasPromise = foaas.getFoaas();
+    console.log(foaasPromise);
+    foaasPromise.then(function(response) {
+      let body = JSON.parse(response);
+      $('#ageVerificationDenied').append(`
+        <div class="modal-body">
+        <p>${body.message}${body.subtitle}</p>
+        </div>`)
+    });
+  });
+
   $('#findDrink').click(function() {
     let ingredient = $('#ingredient').val();
     $('#ingredient').val("");
