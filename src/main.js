@@ -26,7 +26,6 @@ $(document).ready(function() {
         promise2.then(function(response){
           let newBoozeParse2 = new BoozeParse();
           let foundDrinkInstructions = newBoozeParse2.getDrinkInfo(response)
-          console.log(foundDrinkInstructions.instructions);
           $('.drinkInfo').append(`<figure><img src=${drink.image}><figcaption><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#${drink.id}">
     ${drink.name}</button></figcaption></figure>
             <div class="modal fade" id="${drink.id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -41,7 +40,11 @@ $(document).ready(function() {
                   <div class="modal-body">
                     <p>${foundDrinkInstructions.glass}</p>
                     <p>${foundDrinkInstructions.instructions}</p>
-                    <p>${foundDrinkInstructions.ingredient}</p>
+                    <div class="col">
+                    ${foundDrinkInstructions.ingredientAmount.map(function(ingredient, index){
+                      return "<p>" + foundDrinkInstructions.ingredientAmount[index] + " " + foundDrinkInstructions.ingredient[index] + "</p>"
+                    }).join('')}
+                    </div>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
