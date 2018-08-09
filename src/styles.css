@@ -42,3 +42,8 @@ h1 {
 .selectIngredient1 {
   text-align: center;
 }
+
+.btn-primary {
+  background-color: #0A82CC;
+  border-color: #0A82CC;
+}

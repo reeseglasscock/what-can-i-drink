@@ -90,7 +90,7 @@ $(document).ready(function() {
       let newBoozeParse = new BoozeParse();
       let foundDrinks = newBoozeParse.getDrinks(response);
 
-      foundDrinks.forEach(function(drink) {
+      foundDrinks.forEach((drink) => {
 
         let boozeInfo = new Booze();
         let promise2 = boozeInfo.getDrinkInfo(drink.name)
