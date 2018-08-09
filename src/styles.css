@@ -4,8 +4,13 @@ html {
 
 body {
   font-family: 'Raleway', sans-serif;
-  background: url('./img/bg_image.jpg') no-repeat;
+  background: linear-gradient(
+      rgba(34,34,34,0.60),
+      rgba(255, 0, 0, 0.4)
+    ),
+      url('./img/bg_image.jpg') no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 h1 {
@@ -17,14 +22,17 @@ h1 {
   font-size: 4em;
 }
 
-.modal-header {
-  text-align: center;
+.modal-title {
+  margin: auto;
+  font-size: 1.5em;
 }
 
 .card {
   margin: 10px;
   padding: 10px;
-  box-shadow: 4px 5px 6px rgba(34,34,34,0.6);
+  box-shadow: 4px 5px 8px rgba(34,34,34,0.8);
+  background-color: rgba(8,50,75,0.95);
+  border-color: black;
 }
 
 .card img {
@@ -44,6 +52,17 @@ h1 {
 }
 
 .btn-primary {
-  background-color: #0A82CC;
-  border-color: #0A82CC;
+  background-color: #052233;
+  border-color: #106597;
+}
+
+.btn-primary:hover {
+  background-color: #052233;
+  border-color: #106597;
+}
+
+#ingredient1Selector {
+  background-color: rgb(34,34,34);
+  color: white;
+  height: 35px;
 }
