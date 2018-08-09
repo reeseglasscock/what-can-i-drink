@@ -32,7 +32,9 @@ $(document).ready(function() {
 
   $('#findDrink').click(function() {
     let ingredient = $('#ingredient').val();
+    let ingredient2 = $('#ingredient2').val();
     $('#ingredient').val("");
+    $('#ingredient2').val("");
     $('.drinkInfo').text("");
 
     let booze = new Booze();

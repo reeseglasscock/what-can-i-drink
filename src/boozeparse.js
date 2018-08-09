@@ -18,7 +18,7 @@ export class BoozeParse {
     let ingredientsArray = [];
     let amountOfIngredients = [];
     for (let i = 1; i <= 15; i++) {
-      if (body.drinks[0][`strIngredient${i}`] != "") {
+      if (typeof body.drinks[0][`strIngredient${i}`] === "string" && body.drinks[0][`strIngredient${i}`] !== "" ) {
         ingredientsArray.push(body.drinks[0][`strIngredient${i}`])
         amountOfIngredients.push(body.drinks[0][`strMeasure${i}`])
       }
