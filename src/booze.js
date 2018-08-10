@@ -9,7 +9,7 @@ export class Booze {
         } else {
           reject(Error(request.statusText));
         }
-      }
+      };
       request.open("GET", url, true);
       request.send();
     });
@@ -25,10 +25,10 @@ export class Booze {
         } else {
           reject(Error(request.statusText));
         }
-      }
+      };
       request.open("GET", url, true);
       request.send();
-    })
+    });
   }
 
   getAllIngredients() {
@@ -41,9 +41,9 @@ export class Booze {
         } else {
           reject(Error(request.statusText));
         }
-      }
+      };
       request.open("GET", url, true);
       request.send();
-    })
+    });
   }
 }

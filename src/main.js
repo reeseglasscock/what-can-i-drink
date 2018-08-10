@@ -16,15 +16,15 @@ $(document).ready(function() {
     let newIngredientParse = new BoozeParse();
     let allIngredients = newIngredientParse.getAllIngredientsParse(response);
     allIngredients.forEach(function(ingredient) {
-      $('#ingredient1Selector').append(`<option>${ingredient}</option>`)
-    })
+      $('#ingredient1Selector').append(`<option>${ingredient}</option>`);
+    });
   });
 
   //age verification modal
   $('#ageVerification').modal({
     backdrop: 'static',
     keyboard: false
-  })
+  });
 
   $('#underage').click(function() {
     $("#overage").hide();
@@ -37,7 +37,7 @@ $(document).ready(function() {
         <div class="modal-body">
         <iframe src="https://giphy.com/embed/5ftsmLIqktHQA" width="480" height="372" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
         <p>${body.message}${body.subtitle}</p>
-        </div>`)
+        </div>`);
     });
   });
 
@@ -93,11 +93,11 @@ $(document).ready(function() {
       foundDrinks.forEach((drink) => {
 
         let boozeInfo = new Booze();
-        let promise2 = boozeInfo.getDrinkInfo(drink.name)
+        let promise2 = boozeInfo.getDrinkInfo(drink.name);
 
         promise2.then(function(response){
           let newBoozeParse2 = new BoozeParse();
-          let foundDrinkInstructions = newBoozeParse2.getDrinkInfo(response)
+          let foundDrinkInstructions = newBoozeParse2.getDrinkInfo(response);
 
           $('.drinkInfo').append(`
             <div class="card">
@@ -120,8 +120,8 @@ $(document).ready(function() {
                     <p>${foundDrinkInstructions.instructions}</p>
                     <div class="col">
                     ${foundDrinkInstructions.ingredientAmount.map(function(ingredient, index){
-                      return "<p>" + foundDrinkInstructions.ingredientAmount[index] + " " + foundDrinkInstructions.ingredient[index] + "</p>"
-                    }).join('')}
+    return "<p>" + foundDrinkInstructions.ingredientAmount[index] + " " + foundDrinkInstructions.ingredient[index] + "</p>";
+  }).join('')}
                     </div>
                   </div>
                   <div class="modal-footer">
@@ -129,7 +129,7 @@ $(document).ready(function() {
                   </div>
                 </div>
               </div>
-            </div>`)
+            </div>`);
 
 
 
@@ -138,9 +138,9 @@ $(document).ready(function() {
           $('.showError').text(`There was an error: ${error.message}`);
         });
 
-      })
+      });
     }, function(error) {
       $('.showError').text(`There was an error: ${error.message}`);
     });
-  })
-})
+  });
+});

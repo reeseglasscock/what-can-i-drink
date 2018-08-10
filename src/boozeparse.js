@@ -1,5 +1,5 @@
 import { Drink } from './drink.js';
-import { Instruction } from './instruction.js'
+import { Instruction } from './instruction.js';
 
 export class BoozeParse {
   getDrinks(response) {
@@ -19,8 +19,8 @@ export class BoozeParse {
     let amountOfIngredients = [];
     for (let i = 1; i <= 15; i++) {
       if (typeof body.drinks[0][`strIngredient${i}`] === "string" && body.drinks[0][`strIngredient${i}`] !== "" ) {
-        ingredientsArray.push(body.drinks[0][`strIngredient${i}`])
-        amountOfIngredients.push(body.drinks[0][`strMeasure${i}`])
+        ingredientsArray.push(body.drinks[0][`strIngredient${i}`]);
+        amountOfIngredients.push(body.drinks[0][`strMeasure${i}`]);
       }
     }
     let foundInstruction= new Instruction(body.drinks[0].strGlass, body.drinks[0].strInstructions, ingredientsArray, amountOfIngredients);

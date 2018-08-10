@@ -10,7 +10,7 @@ export class Foaas {
         } else {
           reject(Error(request.statusText));
         }
-      }
+      };
       request.open("GET", url, true);
       request.setRequestHeader("accept", "application/json");
       request.send();
