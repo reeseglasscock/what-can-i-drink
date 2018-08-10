@@ -5,7 +5,6 @@ export class Foaas {
       let request = new XMLHttpRequest();
       let url = `https://www.foaas.com/off/child/${names}`;
       request.onload = () => {
-        console.log(request.status);
         if (request.status === 200) {
           resolve(request.response);
         } else {

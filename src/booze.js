@@ -4,7 +4,6 @@ export class Booze {
       let request = new XMLHttpRequest();
       let url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`;
       request.onload = () => {
-        console.log(request.status);
         if (request.status === 200) {
           resolve(request.response);
         } else {

@@ -99,8 +99,6 @@ $(document).ready(function() {
           let newBoozeParse2 = new BoozeParse();
           let foundDrinkInstructions = newBoozeParse2.getDrinkInfo(response)
 
-          console.log(foundDrinkInstructions);
-
           $('.drinkInfo').append(`
             <div class="card">
               <figure class="drink-img">
