@@ -98,8 +98,8 @@ $(document).ready(function() {
         promise2.then(function(response){
           let newBoozeParse2 = new BoozeParse();
           let foundDrinkInstructions = newBoozeParse2.getDrinkInfo(response);
-
-          $('.drinkInfo').append(`
+          let html = "";
+          html += `
             <div class="card">
               <figure class="drink-img">
                 <img src=${drink.image}>
@@ -129,8 +129,11 @@ $(document).ready(function() {
                   </div>
                 </div>
               </div>
-            </div>`);
+            </div>`
 
+          $('.drinkInfo').append(html)
+
+          console.log(html)
 
 
 
